@@ -16,7 +16,7 @@
     <div class="container">
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="#">NgidamGorengan
                     <!-- <img src="head.jpeg" alt="Logo" width="80" height="48" class="d-inline-block align-text-top" /> -->
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -69,16 +69,27 @@
                 <div class="tab-content mt-4">
                     <!-- Income Form -->
                     <div class="tab-pane fade show active" id="income" role="tabpanel" aria-labelledby="income-tab">
-                        <form name="income">
+                        <form name="submit-to-google-sheet">
                             <div class="mb-3">
                                 <label class="form-label">Jumlah Pemasukan</label>
-                                <input type="number" class="form-control" name="Jumlah" required
+                                <input type="number" class="form-control input-number" name="Masuk" required
                                     placeholder="Masukkan jumlah pemasukan">
                             </div>
                             <div class="mb-3">
                                 <label class="form-label">Catatan (opsional)</label>
-                                <input type="text" class="form-control" name="Catatan"
-                                    placeholder="Contoh: Singkong ndak dibayar">
+                                <input type="text" class="form-control" name="Keterangan"
+                                    placeholder="...">
+                                <input type="hidden" name="Status" value="Masuk">
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <div class="spinner-border text-primary sendProgress mb-3"
+                                            style="display: none;" role="status">
+                                            <span class="visually-hidden">Loading...</span>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             <button type="submit" class="btn btn-primary w-100">
                                 <i class="bi bi-save me-2"></i>Simpan Pemasukan
@@ -88,7 +99,7 @@
 
                     <!-- Expense Form -->
                     <div class="tab-pane fade" id="expense" role="tabpanel" aria-labelledby="expense-tab">
-                        <form name="expense">
+                        <form name="submit-to-google-sheet2">
                             <div class="mb-3">
                                 <label class="form-label">Kategori</label>
                                 <select class="form-select" name="Kategori" required>
@@ -99,14 +110,25 @@
                                 </select>
                             </div>
                             <div class="mb-3">
-                                <label class="form-label">Jumlah Pengeluaran</label>
-                                <input type="number" class="form-control" name="Jumlah" required
-                                    placeholder="Masukkan jumlah pengeluaran">
+                                <label class="form-label">Item</label>
+                                <input type="text" class="form-control" name="Item" required
+                                    placeholder="Contoh: Minyak goreng 15 liter">
                             </div>
                             <div class="mb-3">
-                                <label class="form-label">Item</label>
-                                <input type="text" class="form-control" name="Deskripsi" required
-                                    placeholder="Contoh: Minyak goreng 15 liter">
+                                <label class="form-label">Jumlah Pengeluaran</label>
+                                <input type="number" class="form-control input-number" name="Keluar" required
+                                    placeholder="Masukkan jumlah pengeluaran">
+                                <input type="hidden" name="Status" value="Keluar">
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <div class="spinner-border text-primary sendProgress mb-3"
+                                            style="display: none;" role="status">
+                                            <span class="visually-hidden">Loading...</span>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             <button type="submit" class="btn btn-primary w-100">
                                 <i class="bi bi-save me-2"></i>Simpan Pengeluaran
