@@ -1,4 +1,6 @@
 
+
+
 // Menambahkan titik setiap tiga angka pada input dengan class "input-number"
 document.addEventListener('input', function(e) {
     if (e.target.classList.contains('input-number')) {

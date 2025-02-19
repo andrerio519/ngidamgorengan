@@ -46,7 +46,7 @@
 
         <div class="card shadow">
             <div class="card-header bg-primary text-white">
-                <h2 class="h4 mb-0">Input Data</h2>
+                <h2 class="h4 mb-0 perDate">Input Data</h2>
             </div>
             <div class="card-body">
                 <!-- Navigation Tabs -->
@@ -74,11 +74,15 @@
                                 <label class="form-label">Jumlah Pemasukan</label>
                                 <input type="number" class="form-control input-number" name="Masuk" required
                                     placeholder="Masukkan jumlah pemasukan">
+                                    
                             </div>
                             <div class="mb-3">
                                 <label class="form-label">Catatan (opsional)</label>
                                 <input type="text" class="form-control" name="Keterangan" placeholder="...">
                                 <input type="hidden" name="Status" value="Masuk">
+                                <input type="hidden" name="Keluar" value="0">
+                                <input type="hidden" name="Item" value="-">
+                                <input type="hidden" name="Kategori" value="-">
                             </div>
                             <div class="row">
                                 <div class="col-md-4">
@@ -118,6 +122,8 @@
                                 <input type="number" class="form-control input-number" name="Keluar" required
                                     placeholder="Masukkan jumlah pengeluaran">
                                 <input type="hidden" name="Status" value="Keluar">
+                                <input type="hidden" name="Masuk" value="0">
+                                <input type="hidden" name="Keterangan" value="-">
                             </div>
                             <div class="row">
                                 <div class="col-md-4">
